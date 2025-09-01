@@ -1,0 +1,11 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    {% for post in posts %}
+        <article class="post">
+            <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+            <p class="post-meta">منتشر شده در تاریخ {{ post.published_date|date:"Y-m-d" }} توسط {{ post.author }}</p>
+            <p>{{ post.content|truncatewords:30|linebreaksbr }}</p>
+        </article>
+    {% endfor %}
+{% endblock %}

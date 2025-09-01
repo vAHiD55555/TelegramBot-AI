@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حیاط‌پشتی (BackYard) - برند نان‌دارک</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #fdfaf6;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        }
+        header h1 a {
+            color: #2c3e50;
+            text-decoration: none;
+        }
+        header p {
+            color: #7f8c8d;
+        }
+        .post {
+            border-bottom: 1px solid #ecf0f1;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        .post:last-child {
+            border-bottom: none;
+        }
+        .post h2 a {
+            color: #34495e;
+            text-decoration: none;
+        }
+        .post-meta {
+            color: #95a5a6;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><a href="{% url 'post_list' %}">حیاط‌پشتی (BackYard)</a></h1>
+            <p>تحت برند نان‌دارک (Naan-Dark) - ما، گاهی، هرآنچه‌ می‌خوریم، هستیم.</p>
+        </header>
+        <main>
+            {% block content %}
+            {% endblock %}
+        </main>
+    </div>
+</body>
+</html>
